@@ -78,9 +78,9 @@ const cosas = [
     {id: 4, nombre: "zapato", precio: 700},
 ];
 
-// let precio = parseInt(prompt("Ingrese el precio minimo del producto"));
-// let filtrados = cosas.filter(cosa => cosa.precio > precio);
-// console.log(filtrados);
+let precio = parseInt(prompt("Ingrese el precio minimo del producto"));
+let filtrados = cosas.filter(cosa => cosa.precio > precio);
+console.log(filtrados);
 
 //metodo some verifica si al menos uno de los elemento del array cumple la condicion que le pasemos
 
