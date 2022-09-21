@@ -13,7 +13,7 @@ class Geneticas {
     }
 };
 
-const cepa1 = new Geneticas ('white widow', 16.6, 'aroma poderoso, agrio y a mofeta, con un sabor cítrico con notas florales', 150);
+ const cepa1 = new Geneticas ('white widow', 16.6, 'aroma poderoso, agrio y a mofeta, con un sabor cítrico con notas florales', 150);
 
 const cepa2 = new Geneticas (
     'gorilla glue',
@@ -36,51 +36,28 @@ let simulador = document.createElement('div');
 simulador.innerHTML = '<h5>Elija alguna de las siguientes geneticas: White Whidow, Gorilla Glue o Black Domina</h5>';
 mainIndex.append(simulador);
 
-let ingreseCepa = prompt('Ingrese su cepa');
+let ingreseCepa = document.getElementById('ingreseCepa');
 
-productosFiltrados = geneticas.filter(item => item.nombre === ingreseCepa);
+const productosFiltrados = geneticas.filter(item => item.nombre === ingreseCepa.value);
 
-for(const item of productosFiltrados) {
-    if(ingreseCepa === 'white widow') {
-        let cepa = document.createElement('div');
-        cepa.innerHTML = cepa1.describir();
-        simulador.append(cepa);
-    }else if(ingreseCepa === 'gorilla glue') {
-        let cepa = document.createElement('div');
-        cepa.innerHTML = cepa2.describir();
-        simulador.append(cepa);
-    }else if(ingreseCepa === 'black domina') {
-        let cepa = document.createElement('div');
-        cepa.innerHTML = cepa3.describir();
-        simulador.append(cepa);
+let boton = document.getElementById('btnPrincipal');
+
+boton.addEventListener('click', () => {
+    for(const item of productosFiltrados) {
+        if(ingreseCepa.value === 'white widow') {
+            let cepa = document.createElement('div');
+            cepa.innerHTML = cepa1.describir();
+            simulador.append(cepa);
+        }else if(ingreseCepa.value === 'gorilla glue') {
+            let cepa = document.createElement('div');
+            cepa.innerHTML = cepa2.describir();
+            simulador.append(cepa);
+        }else if(ingreseCepa.value === 'black domina') {
+            let cepa = document.createElement('div');
+            cepa.innerHTML = cepa3.describir();
+            simulador.append(cepa);
+        }
     }
-}
+});
 
-// let precio = parseFloat(prompt('Ingrese el precio minimo'));
-// let filtro = geneticas.filter((genetica) => genetica.precio > precio);
-// console.log(filtro);
-
-// if(precio < 150){
-//     alert(`White Widow: $${cepa1.precio}, Gorilla Glue: $${cepa2.precio}, Black Domina: $${cepa3.precio}`);
-// }else if(precio < 500){
-//     alert(`Gorilla Glue: $${cepa2.precio}, Black Domina: $${cepa3.precio}`);
-// }else{
-//     alert(`Black Domina: $${cepa3.precio}`);
-// }
-
-//let pregunta = prompt('Ingrese "all" para ver todas las geneticas disponibles y su informacion');
-// if(pregunta === 'all'){
-//     let mensajeUno = `Nombre: ${cepa1.nombre}, THC: ${cepa1.thc}%, descripcion: ${cepa1.descripcion} `;
-//     let mensajeDos = `Nombre: ${cepa2.nombre}, THC: ${cepa2.thc}%, descripcion: ${cepa2.descripcion} `;
-//     let mensajeTres = `Nombre: ${cepa3.nombre}, THC: ${cepa3.thc}%, descripcion: ${cepa3.descripcion} `;
-//     let mensaje = `
-//     ${mensajeUno}
-    
-//     ${mensajeDos}
-    
-//     ${mensajeTres}`;
-    
-//     alert(mensaje);
-// }else{
-//     alert('Ha ingresado un valor incorrecto');
-// }
+console.log(boton);

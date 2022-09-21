@@ -5,7 +5,7 @@ function saludar(nombre) {
 }
 
 let boton = document.getElementById('btnPrincipal');
-//boton.addEventListener('click', saludar);
+boton.addEventListener('click', saludar);
 
 //otra forma de hacer lo mismo es con otro metodo, pero es menos dinamico
 
