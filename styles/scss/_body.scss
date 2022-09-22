@@ -1,7 +1,11 @@
 body {
-    background-image: url("https://img.freepik.com/premium-photo/cannabis-plant-greenhouse-farm-marijuana-leaves-background-indica-cannabis-cultivation-herbal-medicine_141345-238.jpg?w=1060");
+    background-image: url("/assets/evileyes1.png");
     background-color: #008000;
-    font-family: 'Cinzel', serif;
     background-size: cover;
-    height: 100vh;
+}
+
+@media screen and (min-width: 1024px){
+    body {
+        background-size:50%;
+    }
 }

@@ -5,13 +5,37 @@
 }
 
 body {
-  background-image: url("https://img.freepik.com/premium-photo/cannabis-plant-greenhouse-farm-marijuana-leaves-background-indica-cannabis-cultivation-herbal-medicine_141345-238.jpg?w=1060");
+  background-image: url("/assets/evileyes1.png");
   background-color: #008000;
-  font-family: "Cinzel", serif;
   background-size: cover;
-  height: 100vh;
 }
 
+@media screen and (min-width: 1024px) {
+  body {
+    background-size: 50%;
+  }
+}
+.header {
+  border-bottom: 1px inset white;
+  color: #fff;
+  display: flex;
+  justify-content: space-evenly;
+}
+.header .row nav #header__listaDeNavegacion {
+  display: flex;
+  justify-content: space-between;
+  letter-spacing: 4px;
+}
+.header .row nav #header__listaDeNavegacion .header__listaDeNavegacion__items {
+  display: flex;
+}
+
+@media screen and (max-width: 1024px) {
+  #header__listaDeNavegacion {
+    letter-spacing: 1px;
+    font-size: small;
+  }
+}
 #mainIndex {
   border-style: outset #fff;
   background: #fff;

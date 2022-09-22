@@ -1,0 +1,28 @@
+.header{
+    border-bottom: 1px inset white;
+    color: #fff;
+    display: flex;
+    justify-content: space-evenly;
+
+    .row{
+
+        nav{
+
+            #header__listaDeNavegacion{
+                display: flex;
+                letter-spacing: 4px;
+
+                .header__listaDeNavegacion__items{
+                    display: flex;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #header__listaDeNavegacion{
+        letter-spacing: 1px;
+        font-size: small;
+    }
+}
