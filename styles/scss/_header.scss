@@ -1,28 +1,45 @@
 .header{
-    border-bottom: 1px inset white;
-    color: #fff;
+    color: #000;
+    font-size: 1.1em;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    font-style: oblique;
+    font-weight: bold;
+    font-family: 'Roboto Condensed', serif;
 
-    .row{
-
-        nav{
-
+    .rowHeader{
+    
+        .nav{
+         
             #header__listaDeNavegacion{
                 display: flex;
-                letter-spacing: 4px;
+                letter-spacing: 2px;
+                list-style-type: none;
+                width: 40rem;
+                padding: 0.5rem;
+                padding-top: 1rem;
+                justify-content: space-between;
 
                 .header__listaDeNavegacion__items{
-                    display: flex;
+
+                    a{
+                        text-decoration: none;
+                        color: #000;
+                    }
+                    
                 }
             }
         }
     }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 992px) {
+    // .menuHamburguesa{
+    //     display: none;
+    // }
     #header__listaDeNavegacion{
-        letter-spacing: 1px;
+        letter-spacing: 0.5px;
         font-size: small;
+        display: none;
     }
 }

@@ -5,42 +5,84 @@
 }
 
 body {
-  background-image: url("/assets/evileyes1.png");
-  background-color: #008000;
-  background-size: cover;
+  background-image: url("https://cdn.pixabay.com/photo/2021/02/09/19/21/dog-5999671_960_720.png");
+  background-color: #fbcbd4;
+  background-size: auto;
+  background-repeat: no-repeat;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (max-width: 1070px) {
   body {
-    background-size: 50%;
+    background-image: url("/assets/background2.png");
+    background-size: auto;
   }
 }
 .header {
-  border-bottom: 1px inset white;
-  color: #fff;
+  color: #000;
+  font-size: 1.1em;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  font-style: oblique;
+  font-weight: bold;
+  font-family: "Roboto Condensed", serif;
 }
-.header .row nav #header__listaDeNavegacion {
+.header .rowHeader .nav #header__listaDeNavegacion {
   display: flex;
+  letter-spacing: 2px;
+  list-style-type: none;
+  width: 40rem;
+  padding: 0.5rem;
+  padding-top: 1rem;
   justify-content: space-between;
-  letter-spacing: 4px;
 }
-.header .row nav #header__listaDeNavegacion .header__listaDeNavegacion__items {
-  display: flex;
+.header .rowHeader .nav #header__listaDeNavegacion .header__listaDeNavegacion__items a {
+  text-decoration: none;
+  color: #000;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 992px) {
   #header__listaDeNavegacion {
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     font-size: small;
+    display: none;
   }
 }
-#mainIndex {
-  border-style: outset #fff;
-  background: #fff;
+.carousel-inner {
+  height: 58vh;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
-label {
-  color: #fff;
+#mainIndex {
+  background: #fff;
+}
+#mainIndex #section1 .col {
+  background-color: #fbcbd4;
+}
+#mainIndex #section1 .textoPrincipal {
+  background-color: #fbcbd4;
+  padding: 1rem;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+}
+#mainIndex #section1 .textoPrincipal p img {
+  width: 30%;
+}
+
+.mainProducts .rowAccesorios {
+  margin: 1rem;
+  gap: 0.5rem;
+  margin-bottom: 5rem;
+}
+.mainProducts .rowAccesorios h3 {
+  display: flex;
+  align-items: center;
+}
+.mainProducts .rowAlimentos {
+  margin: 1rem;
+  gap: 0.5rem;
+}
+.mainProducts .rowAlimentos h3 {
+  display: flex;
+  align-items: center;
 }/*# sourceMappingURL=style.css.map */

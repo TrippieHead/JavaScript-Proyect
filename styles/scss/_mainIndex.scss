@@ -1,8 +1,30 @@
-#mainIndex {
-    border-style: outset #fff;
-    background: #fff;
+.carousel-inner{
+    height: 58vh;
+    object-fit: cover;
 }
 
-label {
-    color: #fff;
+#mainIndex {
+    background: #fff;
+
+    #section1{
+
+        .col{
+            //background-color: rgba(204, 0, 255, 0.26);
+            background-color: #fbcbd4;
+        }
+
+        .textoPrincipal{
+            background-color: #fbcbd4;
+            padding: 1rem;
+            letter-spacing: 1px;
+            word-spacing: 1px;
+
+            p{
+                img{
+                    width: 30%;
+                }
+            }
+        }
+    }
 }
+
