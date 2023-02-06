@@ -1,25 +1,24 @@
 .header{
     color: #000;
-    font-size: 1.1em;
+    font-size: 1rem;
     display: flex;
     justify-content: center;
-    font-style: oblique;
     font-weight: bold;
     font-family: 'Roboto Condensed', serif;
 
     .rowHeader{
-    
+        
         .nav{
-         
+            
             #header__listaDeNavegacion{
                 display: flex;
                 letter-spacing: 2px;
                 list-style-type: none;
                 width: 40rem;
                 padding: 0.5rem;
-                padding-top: 1rem;
-                justify-content: space-between;
-
+                justify-content: space-around;
+                margin-top: 15px;
+                
                 .header__listaDeNavegacion__items{
 
                     a{

@@ -17,12 +17,22 @@ items.addEventListener('click', e => {
     btnAccion(e);
 })
 
+document.addEventListener('DOMContentLoaded', () => {
+    fetchData()
+})
+
+const fetchData = async () => {
+    const res = await fetch('/stock.json')
+    const baseDeDatos = await res.json()
+    renderizarProductos(baseDeDatos)
+}
+
 //Renderiza los productos en pantalla
 
-const renderizarProductos = () => {
+const renderizarProductos = baseDeDatos => {
     baseDeDatos.forEach(producto => {
         templateCard.querySelector('h6').textContent = producto.nombre;
-        templateCard.querySelector('p').textContent = '$' + producto.precio;
+        templateCard.querySelector('p').textContent = producto.precio;
         templateCard.querySelector('img').setAttribute('src', producto.imagen)
         templateCard.querySelector('.btn').dataset.id = producto.id;
 
@@ -64,14 +74,15 @@ const setCarrito = (objeto) => {
 //Renderiza el carrito como tal
 
 const renderizarCarrito = () => {
-    items.innerHTML = '';
+    items.innerHTML = ''
+
     Object.values(carrito).forEach(producto => {
         templateCarrito.querySelector('th').textContent = producto.id;
         templateCarrito.querySelectorAll('td')[0].textContent = producto.nombre;
         templateCarrito.querySelectorAll('td')[1].textContent = producto.cantidad;
+        templateCarrito.querySelector('span').textContent = producto.precio * producto.cantidad;
         templateCarrito.querySelector('.btn-info').dataset.id = producto.id;
         templateCarrito.querySelector('.btn-danger').dataset.id = producto.id;
-        templateCarrito.querySelector('span').textContent = producto.cantidad * producto.precio;
 
         const clone = templateCarrito.cloneNode(true);
         fragment.append(clone)
@@ -87,11 +98,9 @@ const renderizarCarrito = () => {
 //Renderiza footer del carrito, suma cantidad total y precio total
 
 const renderizarFooter = () => {
-    footerCarrito.innerHTML = '';
+    footerCarrito.innerHTML = ''
     if(Object.keys(carrito).length === 0){
-        footerCarrito.innerHTML = `
-        <th scope="row" colspan="5">Carrito vacío - comience a comprar!</th>
-        `;
+        footerCarrito.innerHTML = `<th scope="row" colspan="5">Carrito vacío - comience a comprar!</th>`
         return
     }
 
@@ -102,15 +111,14 @@ const renderizarFooter = () => {
     templateFooter.querySelector('span').textContent = sumaPrecios;
 
     const clone = templateFooter.cloneNode(true);
-    fragment.append(clone);
-    footerCarrito.append(fragment);
+    fragment.appendChild(clone);
+    footerCarrito.appendChild(fragment);
 
     btnVaciar = document.getElementById('vaciar-carrito');
     btnVaciar.addEventListener('click', () =>{
-        carrito = {};
+        carrito = {}
         renderizarCarrito()
     })
-
 }
 
 //Seteamos las acciones de los botones internos del carrito (agregar y quitar)
@@ -141,4 +149,4 @@ if(localStorage.getItem('carrito')){
     renderizarCarrito();
 }
 
-renderizarProductos();
+renderizarProductos(baseDeDatos);

@@ -19,10 +19,9 @@ body {
 }
 .header {
   color: #000;
-  font-size: 1.1em;
+  font-size: 1rem;
   display: flex;
   justify-content: center;
-  font-style: oblique;
   font-weight: bold;
   font-family: "Roboto Condensed", serif;
 }
@@ -32,8 +31,8 @@ body {
   list-style-type: none;
   width: 40rem;
   padding: 0.5rem;
-  padding-top: 1rem;
-  justify-content: space-between;
+  justify-content: space-around;
+  margin-top: 15px;
 }
 .header .rowHeader .nav #header__listaDeNavegacion .header__listaDeNavegacion__items a {
   text-decoration: none;
@@ -73,8 +72,52 @@ body {
   text-align: center;
   margin-top: 3rem;
   gap: 1.5rem;
+  font-style: italic;
+  font-family: "Raleway", sans-serif;
 }
 #mainIndex #section1 .textoPrincipal .parrafo img {
   width: 50%;
   border-radius: 50%;
+}
+
+#mainProducts {
+  background-color: #fbcbd4;
+  background-image: none;
+}
+#mainProducts main #productos {
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  color: black;
+  padding-top: 1.5rem;
+  margin: 8px;
+  text-align: center;
+}
+#mainProducts main #carrito {
+  padding-top: 2rem;
+  margin: 10px;
+}
+
+#mainContact {
+  width: 93%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding-top: 3rem;
+}
+#mainContact .contactParrafo {
+  width: 40%;
+  margin-top: 5rem;
+}
+#mainContact .formulario {
+  border: inset 1px white;
+  padding: 1rem;
+}
+#mainContact .formulario .form-check {
+  display: flex;
+  align-items: center;
+  font-size: small;
+}
+#mainContact .formulario .btn-form {
+  background-color: white;
+  margin-top: 1rem;
 }/*# sourceMappingURL=style.css.map */

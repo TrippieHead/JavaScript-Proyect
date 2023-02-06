@@ -1,0 +1,28 @@
+#mainContact {
+    width: 93%;
+    display: flex;
+    justify-content: space-around;
+    align-items:flex-start;
+    padding-top: 3rem;
+
+    .contactParrafo{
+        width: 40%;
+        margin-top: 5rem;
+    }
+    
+    .formulario{
+        border: inset 1px white;
+        padding: 1rem;
+
+        .form-check{
+            display: flex;
+            align-items: center;
+            font-size: small;
+        }
+
+        .btn-form{
+            background-color: white;
+            margin-top: 1rem;
+        }
+    }
+}
